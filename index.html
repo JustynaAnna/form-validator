@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="./public/tailwind.css" /> -->
+    <title>Validator</title>
+  </head>
+  <body class="gradient">
+    <div class="wrapper gradient shadow">
+      <form>
+        <h1>Create Account</h1>
+        <div class="form-box">
+          <label for="username">Username:</label>
+          <input
+            class="shadow"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+            aria-label="username"
+          />
+          <p class="error-text">error</p>
+        </div>
+
+        <div class="form-box">
+          <label for="password">Password:</label>
+          <input
+            class="shadow"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            aria-label="password"
+          />
+          <p class="error-text">error</p>
+        </div>
+
+        <div class="form-box">
+          <label for="password2">Confirm password:</label>
+          <input
+            class="shadow"
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="Confirm password"
+            aria-label="Confirm password"
+          />
+          <p class="error-text">error</p>
+        </div>
+
+        <div class="form-box">
+          <label for="email">Email address:</label>
+          <input
+            class="shadow"
+            type="email"
+            id="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            name="email"
+          />
+          <p class="error-text">error</p>
+        </div>
+
+        <div class="control-buttons">
+          <button class="clear btn shadow" type="reset">Clear</button>
+          <button class="send btn shadow" type="submit">Send</button>
+        </div>
+
+        <div class="popup">
+          <p>The form has been successfully submitted.</p>
+          <button class="close btn shadow" type="button">Close</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
