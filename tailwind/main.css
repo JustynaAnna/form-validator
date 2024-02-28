@@ -25,10 +25,6 @@ h1 {
   @apply sm:text-2xl font-bold mb-2.5 text-center;
 }
 
-/* .form-box {
-  @apply mb-4;
-} */
-
 .form-box label {
   @apply inline-block m-[5px];
   /*label jest inline. Ustawienie inline-block pozwoli mi dodac marginesy */
@@ -44,21 +40,6 @@ input::placeholder {
 
 .form-box input:focus {
   @apply focus:outline-none border-[3px] border-solid border-inputBorderFocus;
-}
-
-.form-box.error input {
-  @apply border border-solid border-inputBorderFocus;
-  /* background-color: rgba(244, 164, 96, 0.1); */
-}
-
-.form-box .error-text {
-  /* display: none; Nie dodaje tego, a visibility, bo none jakby usuwa mi ten element więc wpływa to na wyglad */
-  /*hidden [tu invisible] sprawia, że el. jest, ale niewidoczny. Wiec odstępy mam nadal jakie chciałam*/
-  @apply invisible mt-[5px] ml-[10px] text-sm text-customFontColor;
-}
-.form-box.error .error-text {
-  /*jeżeli klasa form-box zawiera error to dla .error-text są ustawienia stylów*/
-  @apply invisible;
 }
 
 .control-buttons {

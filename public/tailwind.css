@@ -587,10 +587,6 @@ h1 {
   }
 }
 
-/* .form-box {
-  @apply mb-4;
-} */
-
 .form-box label {
   margin: 5px;
   display: inline-block;
@@ -629,31 +625,6 @@ input::placeholder {
 .form-box input:focus:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.form-box.error input {
-  border-width: 1px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 159 175 / var(--tw-border-opacity));
-  /* background-color: rgba(244, 164, 96, 0.1); */
-}
-
-.form-box .error-text {
-  /* display: none; Nie dodaje tego, a visibility, bo none jakby usuwa mi ten element więc wpływa to na wyglad */
-  /*hidden [tu invisible] sprawia, że el. jest, ale niewidoczny. Wiec odstępy mam nadal jakie chciałam*/
-  visibility: hidden;
-  margin-top: 5px;
-  margin-left: 10px;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(65 140 180 / var(--tw-text-opacity));
-}
-
-.form-box.error .error-text {
-  /*jeżeli klasa form-box zawiera error to dla .error-text są ustawienia stylów*/
-  visibility: hidden;
 }
 
 .control-buttons {
