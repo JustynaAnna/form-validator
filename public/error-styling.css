@@ -6,7 +6,7 @@
   /* display: none; Nie dodaje tego, a visibility, bo none jakby usuwa mi ten element więc wpływa to na wyglad */
   visibility: hidden; /*hidden sprawia, że el. jest, ale niewidoczny. Wiec odstępy mam nadal jakie chciałam*/
   color: rgb(244, 118, 96);
-  font-size: medium;
+  font-size: small;
   margin-left: 7px;
 }
 

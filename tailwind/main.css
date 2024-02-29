@@ -55,11 +55,14 @@ input::placeholder {
 }
 
 .popup {
-  @apply flex justify-center items-center flex-col absolute top-[-300px] left-2/4 transform translate-x-1/2 translate-y-1/2
+  @apply flex justify-center items-center flex-col absolute top-[-300px] left-2/4 transform translate-x-[-50%] translate-y-[-50%]
   w-[600px] h-[200px] bg-bgPopupColor rounded-xl border-[3px] border-solid border-inputBorderFocus
   transition-[top] duration-500;
 }
 
 .popup p {
   @apply text-2xl;
+}
+.show-popup {
+  @apply top-[150px];
 }
