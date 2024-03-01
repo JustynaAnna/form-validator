@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/tailwind.css" />
     <link rel="stylesheet" href="./public/error-styling.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <title>Validator</title>
   </head>
   <body class="gradient">
@@ -25,15 +29,43 @@
         </div>
 
         <div class="form-box">
-          <label for="password">Password:</label>
-          <input
-            class="shadow"
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter password"
-            aria-label="password"
-          />
+          <div class="pass-box form-box">
+            <label for="password">Password:</label>
+            <input
+              class="shadow"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+              aria-label="password"
+            />
+            <i class="fa-solid fa-eye"></i>
+          </div>
+
+          <div>
+            <ul class="requirement-list">
+              <li>
+                <i class="fa-solid fa-circle"></i>
+                <span>At least 8 characters length</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle"></i>
+                <span>At least 1 number (0...9)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle"></i>
+                <span>At least 1 lowercase letter (a...z)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle"></i>
+                <span>At least 1 special symbol (!...$)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle"></i>
+                <span>At least 1 uppercase letter (A...Z)</span>
+              </li>
+            </ul>
+          </div>
           <p class="error-text">Error</p>
         </div>
 
