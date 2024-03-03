@@ -49,3 +49,9 @@
 .valid {
   color: rgb(244, 118, 96);
 }
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: red;
+}

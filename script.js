@@ -6,10 +6,10 @@ const sendBtn = document.querySelector(".send");
 const clearBtn = document.querySelector(".clear");
 const popupModal = document.querySelector(".popup");
 const closeModalBtn = document.querySelector(".close");
-// const form = document.querySelector("form");
+const form = document.querySelector("form");
 
 const showError = (input, msg) => {
-  const formBox = input.parentElement;
+  const formBox = input.closest(".form-box");
   const errorMsg = formBox.querySelector(".error-text");
 
   formBox.classList.add("error");
@@ -17,7 +17,7 @@ const showError = (input, msg) => {
 };
 
 const clearError = (input) => {
-  const formBox = input.parentElement;
+  const formBox = input.closest(".form-box");
   formBox.classList.remove("error");
 };
 
@@ -40,6 +40,8 @@ const validateFieldLength = (input, min) => {
 const validatePasswordMatch = (pass1, pass2) => {
   if (pass1.value !== pass2.value) {
     showError(pass2, "Passwords do not match");
+  } else {
+    clearError(pass2);
   }
 };
 
@@ -80,9 +82,15 @@ const clearForm = () => {
 
 // Funkcja obsługująca wysłanie formularza
 const sendForm = () => {
-  validateNonEmptyFields([usernameInput, pass2Input, emailInput]);
-  validateFieldLength(usernameInput, 3);
   validatePasswordMatch(passwordInput, pass2Input);
+  validateNonEmptyFields([
+    usernameInput,
+    passwordInput,
+    pass2Input,
+    emailInput,
+  ]);
+  validateFieldLength(usernameInput, 3);
+
   validateEmail(emailInput);
   checkErrors();
 };
@@ -93,7 +101,7 @@ sendBtn.addEventListener("click", (e) => {
 });
 
 usernameInput.addEventListener("keypress", (e) => {
-  if (e.key === "Eneter") {
+  if (e.key === "Enter") {
     e.preventDefault();
     sendForm();
   }
@@ -110,7 +118,7 @@ closeModalBtn.addEventListener("click", () => {
 });
 //TUTAJ TESTUJE KOD
 
-const passwordVisibilityIcon = document.querySelector(".fa-eye");
+const passwordVisibilityIcons = document.querySelectorAll(".fa-eye");
 const requirementListItem = document.querySelector(".requirement-list");
 const list = document.querySelectorAll(".requirement-list li");
 
@@ -151,10 +159,13 @@ passwordInput.addEventListener("keyup", (e) => {
   updatePasswordRequirements(e.target.value);
 });
 
-const togglePasswordVisibility = () => {
-  // Toggle the password input type between "password" and "text"
-  passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+const togglePasswordVisibility = (inputField) => {
+  inputField.type = inputField.type === "password" ? "text" : "password";
 };
-passwordVisibilityIcon.addEventListener("click", () => {
-  togglePasswordVisibility();
+
+passwordVisibilityIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    const passwordInput = icon.parentElement.querySelector("input");
+    togglePasswordVisibility(passwordInput);
+  });
 });
