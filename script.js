@@ -163,9 +163,17 @@ const togglePasswordVisibility = (inputField) => {
   inputField.type = inputField.type === "password" ? "text" : "password";
 };
 
+const switchEyeIcon = (item, input) => {
+  const firstInput = input[0]; // Pobieramy pierwszy input z tablicy input
+  item.className = `fa-solid fa-eye${
+    firstInput.type === "password" ? "" : "-slash"
+  }`;
+};
+
 passwordVisibilityIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     const passwordInput = icon.parentElement.querySelector("input");
     togglePasswordVisibility(passwordInput);
+    switchEyeIcon(icon, [passwordInput, pass2Input]);
   });
 });

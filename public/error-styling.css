@@ -20,7 +20,8 @@
   position: relative;
 }
 
-.fa-eye {
+.fa-eye,
+.fa-eye-slash {
   right: 18px;
   top: 70%;
   font-size: 1.2rem;
