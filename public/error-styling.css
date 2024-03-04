@@ -6,7 +6,7 @@
   /* display: none; Nie dodaje tego, a visibility, bo none jakby usuwa mi ten element więc wpływa to na wyglad */
   visibility: hidden; /*hidden sprawia, że el. jest, ale niewidoczny. Wiec odstępy mam nadal jakie chciałam*/
   color: rgb(244, 118, 96);
-  font-size: medium;
+  font-size: small;
   margin-left: 7px;
 }
 
@@ -14,4 +14,45 @@
   /*jeżeli klasa form-box zawiera error to dla .error-text są ustawienia stylów*/
   visibility: visible;
   padding-bottom: 15px;
+}
+
+.pass-box {
+  position: relative;
+}
+
+.fa-eye,
+.fa-eye-slash {
+  right: 18px;
+  top: 70%;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.requirement-list {
+  display: none;
+}
+.display-list {
+  display: block;
+}
+.requirement-list li {
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+.requirement-list li i {
+  font-size: 0.4rem;
+  margin-right: 5px;
+}
+
+.valid {
+  color: rgb(244, 118, 96);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: red;
 }
