@@ -21,7 +21,7 @@ export const validateNonEmptyFields = (input) => {
 
 export const validateFieldLength = (input, min) => {
   if (input.value.length < min) {
-    showError(input, `This field must be at least ${min} characters long`);
+    showError(input, `Minimum ${min} characters required`);
   }
 };
 
@@ -29,8 +29,6 @@ export const validateFieldLength = (input, min) => {
 export const validatePasswordMatch = (pass1, pass2) => {
   if (pass1.value !== pass2.value) {
     showError(pass2, "Passwords do not match");
-  } else {
-    clearError(pass2);
   }
 };
 

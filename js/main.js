@@ -1,6 +1,7 @@
 import {
   clearBtn,
   closeModalBtn,
+  form,
   pass2Input,
   passwordInput,
   passwordVisibilityIcons,
@@ -40,12 +41,21 @@ sendBtn.addEventListener("click", (e) => {
   sendForm();
 });
 
-closeModalBtn.addEventListener("click", () => {
+const closePopupAndRedirect = () => {
   popupModal.classList.remove("show-popup");
   clearForm();
   const newPageUrl =
     "https://en.wikipedia.org/wiki/The_Groke#/media/File:Buka.jpg";
   window.location.href = newPageUrl;
+};
+
+closeModalBtn.addEventListener("click", closePopupAndRedirect);
+
+form.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    closePopupAndRedirect();
+    console.log("zegezet aaa");
+  }
 });
 
 usernameInput.addEventListener("keypress", (e) => {
