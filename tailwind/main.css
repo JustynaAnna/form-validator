@@ -42,6 +42,37 @@ input::placeholder {
   @apply focus:outline-none border-[3px] border-solid border-inputBorderFocus;
 }
 
+.pass-box {
+  @apply relative;
+}
+
+.fa-eye,
+.fa-eye-slash {
+  @apply absolute right-[18px] top-[70%] text-lg text-customFontColor cursor-pointer
+  transform translate-y-[-50%];
+  /* color: #999; */
+}
+
+.requirement-list {
+  @apply hidden;
+}
+
+.display-list {
+  @apply block mt-2.5 ml-4;
+}
+
+.requirement-list li {
+  @apply flex items-center text-sm;
+}
+
+.requirement-list li i {
+  @apply text-[0.4rem] mr-1.5;
+}
+
+.valid {
+  @apply text-requirementListValid;
+}
+
 .control-buttons {
   @apply flex justify-evenly;
 }

@@ -23,6 +23,7 @@ module.exports = {
         placeholderColor: "#c6c5c5",
         inputBorderFocus: "#ff9faf",
         bgPopupColor: "rgb(248, 219, 202, 0.9)",
+        requirementListValid: "rgb(244, 118, 96)",
       },
     },
   },
